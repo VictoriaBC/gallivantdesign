@@ -1,0 +1,26 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "icons",
+      "friendly_name": "Icons"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "illustrations",
+      "friendly_name": "Illustrations"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "services",
+      "friendly_name": "Services"
+    }
+  }
+]

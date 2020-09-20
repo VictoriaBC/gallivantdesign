@@ -1,0 +1,44 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Tech icons 1",
+      "description": "Icons presenting hardware, bigdata, IoT, embedded systems",
+      "price": 53.99,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "tech_icons_1.png"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Tech icons 2",
+      "description": "Icons presenting hardware, bigdata, IoT, embedded systems",
+      "price": 53.99,
+      "category": 2,
+      "rating": 4.6,
+      "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "tech_icons_2.png"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Tech icons 3",
+      "description": "Icons presenting hardware, bigdata, IoT, embedded systems",
+      "price": 53.99,
+      "category": 3,
+      "rating": 4.6,
+      "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+      "image": "tech_icons_3.png"
+    }
+  }
+]

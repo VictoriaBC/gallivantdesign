@@ -1,14 +1,13 @@
-var btn = $('#button');
+        const cursor = document.querySelector('.cursor');
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 100) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+        })
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
