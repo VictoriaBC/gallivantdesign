@@ -84,6 +84,7 @@
         </div>
         <!-- Main navigation -->
         <div class="row bg-white">
+            {% include 'includes/mobile-top-header-logo.html' %}
         <nav class="navbar navbar-expand-lg navbar-light w-100">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -92,21 +93,6 @@
             {% include 'includes/main-nav.html' %}
         </nav>
         </div>
-        <!-- Search -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
     </header>
 
     {% if messages %}

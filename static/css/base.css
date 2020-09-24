@@ -71,11 +71,31 @@ body {
     background: #000 !important;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 .space {
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
+.align_logo {
+     display: inline-block;
+     width: 100%;
+     text-align: center;
+     font-size: 1rem;
+}
+/* -------------------------------- Site background */
+.site-background {
+    background: #d3d3d3;
+}
 /* -------------------------------- Cursor */
 .cursor {
     width: 20px;
@@ -158,6 +178,10 @@ body {
 #myBtn:hover {
   background-color: #555;
 }
+
+.iconframe {
+    padding: 0;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -170,8 +194,8 @@ body {
 
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
+@media (min-width: 990px) {
+.fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
@@ -179,8 +203,107 @@ body {
         z-index: 1030;
     }
 
-    .header-container {
-        padding-top: 164px;
+.header-container {
+        padding-top: 160px;
     }
 
+.space {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    font-size: 28px;
+}
+  .space {
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    font-size: 28px;
+}
+
+  .space {
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+}
+
+@media only screen and (max-width: 769px) {
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    font-size: 28px;
+}
+
+  .space {
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+
+.visit-now-button {
+    background: #1CBC00;
+    color: white;
+    min-width: 180px;
+    border-radius: 25px;
+}
+
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    font-size: 28px;
+}
+
+  .space {
+    margin-top: 75px;
+    margin-bottom: 60px;
+}
+}
+
+@media only screen and (max-width: 1216px) {
+  body {
+    background-color: lightblue;
+  }
+  h2 {
+    font-size: 21px;
+}
+  .space {
+    margin-top: 75px;
+    margin-bottom: 60px;
+}
+}
+
+@media only screen and (max-width: 1408px) {
+  body {
+    background-color: lightblue;
+  }
+  h2 {
+    font-size: 21px;
+}
+  .space {
+    margin-top: 75px;
+    margin-bottom: 60px;
+}
 }

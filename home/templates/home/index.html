@@ -18,10 +18,25 @@
                 </h1>
                 <div class="my-5">
                     <h4>
-                    <a href="" class="visit-now-button btn btn-lg rounded-pill py-3 bubbly-button">Learn more</a>
+                    <a href="{% url 'products'}" class="visit-now-button btn btn-lg rounded-pill py-3">Learn more</a>
                     </h4>
                 </div>
             </div>
         </div>
+                <!-- Search -->
+            <div class="col-12 col-lg-12 my-auto py-1 py-lg-0 ">
+                <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-white rounded-0" type="text" name="q" placeholder="Search">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-white rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
     </div>
 {% endblock %}
