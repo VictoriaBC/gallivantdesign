@@ -1,6 +1,6 @@
 {% load static %}
 
-<!doctype html>
+<!Doctype html>
 <html lang="en">
   <head>
 
@@ -85,7 +85,7 @@
         <!-- Main navigation -->
         <div class="row bg-white">
             {% include 'includes/mobile-top-header-logo.html' %}
-        <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <nav class="navbar navbar-expand-lg navbar-light w-100 border-bottom">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -105,12 +105,34 @@
     {% block content %}
     {% endblock %}
 
+    {% block content_hero %}
+    {% endblock %}
+
     {% block postloadjs %}
     {% endblock %}
 
+<!-- Design request -->
+<section class="container-fluid request-block border-top">
+
+</section>
+<!-- Design request -->
+
+
+<!-- Footer -->
+<footer class="page-footer font-small container-fluid">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Victoria P. Ben-Chivar
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
 <!-------- Cursor ------->
     <div class="cursor"></div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><p><i class="fas fa-arrow-circle-up fa-lg"></i></p><p>Top</p></button>
 
 
     <script>

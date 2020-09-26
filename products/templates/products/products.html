@@ -10,15 +10,19 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay site-background"></div>
+    <div class="overlay site-background">
     <div class="container-fluid">
+        <div class="container h-60">
+        <div class="row h-60 d-flex justify-content-center space">
+            <div class="col-7 col-md-7 my-auto text-center">
+                <h1 class="display-8 text-black">
         <div class="row">
             <div class="col text-center mt-3">
                 <p><h2 class="logo-font">Icons</h2></p>
             </div>
         </div>
         <!-- Search -->
-            <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 mx-auto">
+            <div class="col-12 col-lg-12 my-auto py-1 py-lg-0 mx-auto">
                 <form method="GET" action="">
                     <div class="input-group w-100">
                         <input class="form-control border border-white rounded-0" type="text" name="q" placeholder="Search">
