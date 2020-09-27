@@ -93,6 +93,12 @@ font-size: 1rem;
 .site-background {
 background: #C8E6EE;
 }
+
+.page-title {
+margin-top: 70px;
+margin-bottom: 30px;
+color: black;
+}
 /* -------------------------------- Cursor */
 .cursor {
 width: 20px;
@@ -218,7 +224,7 @@ footer
 .request-block {
     left: 0;
     right: 0;
-    width: 300%;
+    width: 100%;
     background: #C8E6EE;
     padding-top: 100px;
     padding-bottom: 100px;
