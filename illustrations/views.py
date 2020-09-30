@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Illustration
 
 # Create your views here.
 
 def all_illustrations(request):
     """ A view to show all illustrations, including sorting and search queries """
 
-    illustrations = Product.objects.all()
+    illustrations = Illustration.objects.all()
     query = None
 
     if request.GET:
@@ -29,13 +29,13 @@ def all_illustrations(request):
     return render(request, 'illustrations/illustrations.html', context)
 
 
-def product_detail(request, product_id):
+def illustration_detail(request, illustration_id):
     """ A view to show individual product details """
 
-    product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Illustration, pk=illustration_id)
 
     context = {
-        'product': product,
+        'illustration': all_illustrations,
     }
 
-    return render(request, 'illustrations/product_detail.html', context)
+    return render(request, 'illustrations/illustration_detail.html', context)

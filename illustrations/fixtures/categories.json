@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "products.category",
+    "model": "icons.category",
     "fields": {
       "name": "icons",
       "friendly_name": "Icons"
@@ -9,7 +9,7 @@
   },
   {
     "pk": 2,
-    "model": "products.category",
+    "model": "illustrations.category",
     "fields": {
       "name": "illustrations",
       "friendly_name": "Illustrations"
@@ -17,7 +17,7 @@
   },
   {
     "pk": 3,
-    "model": "products.category",
+    "model": "services.category",
     "fields": {
       "name": "services",
       "friendly_name": "Services"

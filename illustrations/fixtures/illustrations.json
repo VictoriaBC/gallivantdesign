@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "products.product",
+    "model": "illustrations.product",
     "fields": {
       "sku": "pp5001340155",
       "name": "Tech icons 1",
@@ -15,7 +15,7 @@
   },
   {
     "pk": 2,
-    "model": "products.product",
+    "model": "illustrations.product",
     "fields": {
       "sku": "pp5001340155",
       "name": "Tech icons 2",
@@ -29,7 +29,7 @@
   },
   {
     "pk": 3,
-    "model": "products.product",
+    "model": "illustrations.product",
     "fields": {
       "sku": "pp5001340155",
       "name": "Tech icons 3",
