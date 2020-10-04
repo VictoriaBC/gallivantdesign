@@ -96,42 +96,11 @@
         </div>
     </header>
 
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    {% block content_hero %}
-    {% endblock %}
-
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
-
 <!-- Design request -->
 <section class="container-fluid request-block border-top">
 
 </section>
 <!-- Design request -->
-
-
-<!-- Footer -->
-<footer class="page-footer font-small container-fluid">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright: Victoria P. Ben-Chivar
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
 
 
 <!-------- Cursor ------->
@@ -197,5 +166,48 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 }
 </script>
 
+
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block content_hero %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}
   </body>
+<!-- Footer -->
+<footer class="page-footer font-small container-fluid">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Victoria P. Ben-Chivar
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 </html>
