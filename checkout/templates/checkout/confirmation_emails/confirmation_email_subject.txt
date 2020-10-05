@@ -1,1 +1,1 @@
-Gallivant Design Confirmation for Order Number {{ order.order_number }}
+Gallivat Design Confirmation for Order Number {{ order.order_number }}
