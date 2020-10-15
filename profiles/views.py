@@ -58,4 +58,5 @@ def download_file(request):
     mime_type, _ = mimetypes.guess_type(fl_path)
     response = HttpResponse(fl, content_type=mime_type)
     response['Content-Disposition'] = "attachment; filename=%s" % filename
-    return response(request, template, context)
+    return response(request, template, context) 
+

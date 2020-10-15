@@ -66,8 +66,7 @@
                                         </ul>
                                     </td>
                                     <td>${{ order.grand_total }}</td>
-                                    <td><a href="{% url 'download_file' order.order_number %}" download="download" target="_blank" class="btn-link"><button
-                            class="btn btn-block btn-primary">Download</button></a></td>
+                                    <td><input type=button><a href="{% url 'download_image' product_id%}"></a>/></td>
                                 </tr>
                             {% endfor %}
                         </tbody>

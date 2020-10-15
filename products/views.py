@@ -137,3 +137,16 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def download_image(request, product_id):
+    import os
+    # current_site = get_current_site(request)
+    product_image =  Product.objects.get(id=product_id)
+    product_image_url = product_image.image_code_url()
+    print(product_image_url, ">>>>>>>>>>>>>>>")
+    response = HttpResponse(mimetype='application/force-download')
+    response['X-Sendfile'] = smart_str(product_image_url)
+    response['Content-Length'] = os.stat(product_image_url).st_size
+
+    return response 
