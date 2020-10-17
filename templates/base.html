@@ -84,7 +84,7 @@
             </div>
         </div>
         <!-- Main navigation -->
-        <div class="row bg-white">
+        <div class="row bg-white ">
             {% include 'includes/mobile-top-header-logo.html' %}
         <nav class="navbar navbar-expand-lg navbar-light w-100 border-bottom">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,14 +96,8 @@
         </div>
     </header>
 
-<!-- Design request -->
-<section class="container-fluid request-block border-top">
 
-</section>
-<!-- Design request -->
-
-
-<!-------- Cursor ------->
+<!-------- Cursor and go-to-top ------->
     <div class="cursor"></div>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><p><i class="fas fa-arrow-circle-up fa-lg"></i></p><p>Top</p></button>
 
@@ -192,6 +186,15 @@ for (var i = 0; i < bubblyButtons.length; i++) {
     {% endblock %}
 
     {% block content_hero %}
+<!-- Footer -->
+<footer class="page-footer font-small container-fluid">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Victoria P. Ben-Chivar</div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
     {% endblock %}
 
     {% block postloadjs %}
@@ -200,14 +203,4 @@ for (var i = 0; i < bubblyButtons.length; i++) {
     </script>
     {% endblock %}
   </body>
-<!-- Footer -->
-<footer class="page-footer font-small container-fluid">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright: Victoria P. Ben-Chivar
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
 </html>

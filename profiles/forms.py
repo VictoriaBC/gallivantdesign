@@ -1,6 +1,14 @@
 from django import forms
 from .models import UserProfile
+from .models import ContactMe
 
+
+
+class ContactMeForm(forms.ModelForm):
+    
+    class Meta:
+        model = ContactMe
+        fields = ('email', 'message')
 
 class UserProfileForm(forms.ModelForm):
     class Meta:

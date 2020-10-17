@@ -33,3 +33,12 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
+
+    # Contactme
+class ContactMe(models.Model):
+	email = models.CharField(max_length = 100)
+	message = models.TextField()
+
+	class Meta:
+		# If not set, the admin renders it as 'Contact Mes'
+		verbose_name_plural = 'Contact Me'
