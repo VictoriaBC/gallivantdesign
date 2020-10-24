@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+        <!-- Header -->
 {% block page_header %}
     <div class="container header-container space">
         <div class="row">
@@ -8,23 +8,20 @@
         </div>
     </div>
 {% endblock %}
-
+        <!-- Content -->
 {% block content %}
     <div class="container h-60">
         <div class="row h-60 d-flex justify-content-center space">
             <div class="col-7 col-md-7 my-auto text-center">
                 <h1 class="display-8 text-black">
-                Rank better on Google search with great User Experience
+                Order custom posters today!
                 </h1>
                 <div class="my-5">
                     <h4>
-                    <a href="{% url 'products'}" class="visit-now-button btn btn-lg rounded-pill py-2">Learn more</a>
+                    <div class="links"><a href="{% url 'contact-me' %}" class="visit-now-button btn btn-lg rounded-pill py-2">Order</a></div>
                     </h4>
                 </div>
             </div>
-           <!-- Contact me-->
-            <div class="links"><a href="{% url 'contact-me' %}"><i class="icon ion-email" style="font-size: 1.2em; color: grey;"></i> Contact me</a></div>
-        </div>
            <!-- Search -->
             <div class="col-12 col-lg-12 my-auto py-1 py-lg-0 ">
                 <form method="GET" action="{% url 'products' %}">
@@ -41,20 +38,19 @@
                 </form>
             </div>
     {% endblock %}
-
+        <!-- Hero -->
     {% block content_hero %}
         <section class="icon-block">    
-        <h2 class="text-black"><i class="fas fa-draw-polygon fa-lg"></i>  Icon bundles</h2>
+        <h2 class="text-black"><i class="fas fa-image fa-lg"></i>  Poster collection
+        <a href="{% url 'products' %}" class="product-link">See all posters <i class="fas fa-arrow-right fa-lg"></i></a></h2> 
         <div class="row border-top border-dark">
                         <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
+                                    <img class="card-img-top img-fluid" src="media/paris_collection.jpg" alt="{{ product.name }}">
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
+                                            <p class="lead mb-0 text-left font-weight-bold text-black">Paris<span class="text-right float-right">2 posters</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -63,13 +59,11 @@
 
                         <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
+                                    <img class="card-img-top img-fluid" src="media/ghibli_collection.jpg" alt="{{ product.name }}">
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
+                                            <p class="lead mb-0 text-left font-weight-bold text-black">Ghibli<span class="text-right float-right">1 poster</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -77,13 +71,11 @@
                         </div>
                         <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
+                                    <img class="card-img-top img-fluid" src="media/travel_collection.jpg" alt="{{ product.name }}">
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
+                                            <p class="lead mb-0 text-left font-weight-bold text-black">Travel<span class="text-right float-right">3 posters</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -91,87 +83,16 @@
                         </div>
                         <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
+                                    <img class="card-img-top img-fluid" src="media/stormtrooper_collection.jpg" alt="{{ product.name }}">
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
+                                            <p class="lead mb-0 text-left font-weight-bold text-black">Storm Trooper<span class="text-right float-right">2 posters</span></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
         </div>
-                    <p class="product-link"><span><a href="{% url 'products'}" class="">See more bundles  <i class="fas fa-arrow-right fa-lg"></i></a></span>
-                    </p>
-</section>
-        <section>    
-        <h2 class="text-black"><i class="fas fa-hands-helping fa-lg"></i>  Services</h2>
-        <div class="row border-top border-dark">
-                        <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                <a href="#">
-                                    <img class="card-img-top img-fluid" src="media/tech_icons_1.png" alt="{{ product.name }}">
-                                </a>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold text-black">Tech Icons<span class="text-right float-right">40 icons</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        </div>
-                    <p class="product-link"><span><a href="{% url 'products'}" class="">See all services  <i class="fas fa-arrow-right fa-lg"></i></a></span>
-                    </p>
 </section>
     {% endblock %}
-<section>
-
-</section>

@@ -10,6 +10,7 @@ color: #fff;
 font-family: 'Lato';
 }
 
+
 /* from Bulma */
 .icon {
 align-items: center;
@@ -28,6 +29,7 @@ width: fit-content;
 background: black;
 color: white;
 min-width: 260px;
+border-radius: 25px;
 }
 
 .visit-now-button {
@@ -40,12 +42,14 @@ border-radius: 25px;
 .btn-black {
     background: black;
     color: white;
+    border-radius: 25px;
 }
 
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
+    border-radius: 25px;
 }
 
 .btn-outline-black:hover,
@@ -53,6 +57,7 @@ border-radius: 25px;
 .btn-outline-black:focus {
     background: black;
     color: white !important;
+    border-radius: 25px;
 }
 
 .shop-now-button:hover,
@@ -130,18 +135,26 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Space gaps */
 .space {
 margin-top: 60px;
 margin-bottom: 60px;
 }
 
+.space_products {
+margin-top: 170px;
+margin-bottom: 60px;
+}
+
+/* Logo */
 .align_logo {
 display: inline-block;
 width: 100%;
 text-align: center;
 font-size: 1rem;
 }
-/* -------------------------------- Site background */
+
+/* -------------------------------- Site background and title */
 .site-background {
 background: #C8E6EE;
 }
@@ -213,6 +226,15 @@ animation: cursorAnim3 .3s forwards;
 border: 2px solid #1CBC00;
 }
 
+/* -------------------------------- Products */
+.product-link {
+    float: right;
+}
+
+.product-details-container {
+    color: #212529;
+}
+
 /* -------------------------------- Go-to-top */
 #myBtn {
 display: none;
@@ -266,6 +288,11 @@ padding-top: 60px;
 /* Footer */
 .page-footer {
     background-color: #216173;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom:;
 }
 
 footer
@@ -274,7 +301,7 @@ footer
     left: 0;
     right: 0;
     width: 100%;
-    bottom: 0;
+    bottom:;
 }
 
 .request-block {
@@ -299,7 +326,6 @@ margin-bottom: 30px;
 } 
 }
 
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 990px) {
 .fixed-top-desktop-only {
@@ -322,7 +348,6 @@ padding-top: 130px;
 margin-top: 60px;
 margin-bottom: 60px;
 }
-
 }
 
 @media only screen and (max-width: 640px) {
@@ -334,14 +359,17 @@ background-color: #C8E6EE;
 padding-top: 70px;
 }
 
-h1 {
-font-size: 28px;
-}
 .space {
 margin-top: 75px;
 margin-bottom: 40px;
 }
+h1 {
+    font-size: 28px;
+}
 
+h2 {
+    font-size: 18px;
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -412,7 +440,6 @@ margin-bottom: 60px;
 body {
 background-color: #C8E6EE;
 }
-
 .header-container {
 padding-top: 70px;
 }
@@ -475,7 +502,7 @@ margin-bottom: 30px;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
+    border-radius: 25;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
