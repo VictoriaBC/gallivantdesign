@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -116,13 +117,11 @@ WSGI_APPLICATION = 'gallivant_design.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+DATABASES = {
+    'default': dj_database_url.parse('postgres://uunyihhhvgtghw:8a006d1578f2e0929b702d750ad8e2a89fcad40b08dcc4cf63caf7fc9fd87e9c@ec2-34-231-56-78.compute-1.amazonaws.com:5432/d9r17g6atetsc5')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

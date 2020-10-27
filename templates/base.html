@@ -37,6 +37,7 @@
     <title>Gallivant Design {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+   <div id="page-container">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-black pt-lg-2 d-none d-lg-flex">
         <!-- Logo -->
@@ -57,7 +58,7 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="" class="dropdown-item">Product Management</a>
+                                <a href=" {% url 'add_product' %} " class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -96,12 +97,44 @@
         </div>
     </header>
 
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
 
-<!-------- Cursor and go-to-top ------->
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block content_hero %}
+    {% endblock %}
+        <!-------- Cursor and go-to-top ------->
     <div class="cursor"></div>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><p><i class="fas fa-arrow-circle-up fa-lg"></i></p><p>Top</p></button>
 
-
+    <!-- Footer is hidden in the beginning before the javascript loads and configures it -->
+    <footer class="page-footer" id="footer">
+        <div class="text-dark">
+            <div>Copyright Gallivant Design</div>
+        </div>
+    </footer>
+    
+        <!-------- Script ------->
     <script>
             const cursor = document.querySelector('.cursor');
 
@@ -160,44 +193,7 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 }
 </script>
 
-
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    {% block content_hero %}
-<!-- Footer -->
-<footer class="page-footer font-small container-fluid">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright: Victoria P. Ben-Chivar</div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-    {% endblock %}
-
-    {% block postloadjs %}
+        {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>

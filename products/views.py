@@ -123,7 +123,7 @@ def edit_product(request, product_id):
         'product': product,
     }
 
-    return render(request, template, context)
+    return render(request, 'products/edit_product.html', context)
 
 
 @login_required

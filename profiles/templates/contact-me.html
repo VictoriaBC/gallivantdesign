@@ -8,7 +8,7 @@
         <!-- Responsive Order request contact form -->
         <div class="col-xs-12 col-lg-6 m-5">
             <form method="post" action="">
-                <legend>Send a request</legend><p>Our prices range depending on how complex your order is.<br/> Note: We normally answer within 24 hours</p>
+                <legend>Send a price request</legend><p>Our prices range depending on how complex your order is.<br/> Note: We normally answer within 1-2 working days.</p>
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button class="btn-primary btn btn-outline-black rounded-25">Submit</button>

@@ -24,6 +24,13 @@ width: 1.5rem;
 width: fit-content;
 }
 
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Buttons */
 .shop-now-button {
 background: black;
@@ -49,6 +56,13 @@ border-radius: 25px;
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
+    border-radius: 25px;
+}
+
+.primaryAction:hover,
+.primaryAction:focus, {
+    background: #1CBC00;
+    color: white;
     border-radius: 25px;
 }
 
@@ -283,25 +297,6 @@ padding-top: 60px;
 .main-menu {
     font-size: 18.66px;
     padding: 10px;
-}
-
-/* Footer */
-.page-footer {
-    background-color: #216173;
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    bottom:;
-}
-
-footer
-{
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    bottom:;
 }
 
 .request-block {
