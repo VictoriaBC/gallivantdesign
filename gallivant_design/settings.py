@@ -24,7 +24,7 @@ SECRET_KEY = '51HIwwYKvrvBCeqcksDUZdKzloA46CUohJT7jjgyZsuofoDR7oDwGzycu0la49dD0Z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gallivantdesign.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -117,12 +117,17 @@ WSGI_APPLICATION = 'gallivant_design.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': dj_database_url.parse('postgres://uunyihhhvgtghw:8a006d1578f2e0929b702d750ad8e2a89fcad40b08dcc4cf63caf7fc9fd87e9c@ec2-34-231-56-78.compute-1.amazonaws.com:5432/d9r17g6atetsc5')
-}
-
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 

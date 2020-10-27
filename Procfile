@@ -1,0 +1,1 @@
+web: gunicorn gallivant_design.wsgi:application
