@@ -190,7 +190,7 @@ To continue on the process of deployment you should have accounts on the followi
   - [Gmail](https://gmail.com)
 
 ### Instructions
-  1. Download a copy of this repository from the link https://github.com/AlenKrga1/FreelanceSolution.git as a download zip file. Or at your terminal do the following git command:
+  1. Download a copy of this repository from the link https://github.com/VictoriaBC/gallivantdesign as a download zip file. Or at your terminal do the following git command:
 
       ```
       $ git clone https://github.com/VictoriaBC/gallivantdesign
@@ -293,7 +293,7 @@ To make the deployment of this application to `Heroku` you will need to do the f
   - `$ git push heroku master`
 
 14. On your `Heroku` dashboard click on `open app` button and check if the application is running correctly.
-
+15. Login credentials. Username: joshua-1 Password: YadiYada2956
 # Credits
 Inspired by Alen Krga and Boutique Ado project in Code Institute course.
 
