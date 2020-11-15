@@ -77,7 +77,7 @@ Users can create their account, log in and reset their password if needed. And S
 
 ### Login page
   - A username or email and password of an existing account are required to sign in.
-  - Login credentials. Username: joshua-1 Password: YadiYada2956
+  - Login credentials. Username: joshua Password: YadiYada2956
 
 ### Profile page
   - For authenticated users. It provides a view of purchased products, download (not fully developed due to time limit on the project, should originally be able to download purchased product).
